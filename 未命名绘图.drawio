@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2023-03-02T05:59:32.077Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="xhNbX-zjCSodfoaMunWB" version="20.3.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-02T06:01:23.092Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="ulSKma47Bj8QMsyElK6A" version="20.3.2" type="github">
   <diagram name="Page-1" id="74e2e168-ea6b-b213-b513-2b3c1d86103e">
     <mxGraphModel dx="1038" dy="585" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="5EThdJY59Bqr3q9newoY-2" value="rabbitmq 服务器" style="swimlane;" vertex="1" parent="1">
+        <mxCell id="5EThdJY59Bqr3q9newoY-2" value="rabbitmq 服务器" style="swimlane;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="250" y="60" width="540" height="530" as="geometry" />
         </mxCell>
         <mxCell id="5EThdJY59Bqr3q9newoY-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="5EThdJY59Bqr3q9newoY-2" source="5EThdJY59Bqr3q9newoY-7" target="5EThdJY59Bqr3q9newoY-9">
@@ -16,7 +16,7 @@
         <mxCell id="5EThdJY59Bqr3q9newoY-16" value="1. 队列消息超时未消费&lt;br&gt;2. 超过队列最大长度&lt;br&gt;3. 消费者异常次数大于重试次数" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="5EThdJY59Bqr3q9newoY-2" source="5EThdJY59Bqr3q9newoY-9" target="5EThdJY59Bqr3q9newoY-15">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="5EThdJY59Bqr3q9newoY-9" value="业务queue" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="5EThdJY59Bqr3q9newoY-2">
+        <mxCell id="5EThdJY59Bqr3q9newoY-9" value="业务queue" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#99FFCC;" vertex="1" parent="5EThdJY59Bqr3q9newoY-2">
           <mxGeometry x="270" y="130" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="5EThdJY59Bqr3q9newoY-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="5EThdJY59Bqr3q9newoY-2" source="5EThdJY59Bqr3q9newoY-15" target="5EThdJY59Bqr3q9newoY-17">
@@ -25,7 +25,7 @@
         <mxCell id="5EThdJY59Bqr3q9newoY-15" value="业务dead letter exchange" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="5EThdJY59Bqr3q9newoY-2">
           <mxGeometry x="270" y="270" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="5EThdJY59Bqr3q9newoY-17" value="业务dead letter queue" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="5EThdJY59Bqr3q9newoY-2">
+        <mxCell id="5EThdJY59Bqr3q9newoY-17" value="业务dead letter queue" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#99FFCC;" vertex="1" parent="5EThdJY59Bqr3q9newoY-2">
           <mxGeometry x="270" y="410" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="5EThdJY59Bqr3q9newoY-3" value="rabbitmq生产者" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
@@ -64,6 +64,20 @@
         </mxCell>
         <mxCell id="5EThdJY59Bqr3q9newoY-22" value="4. reject/nack" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5EThdJY59Bqr3q9newoY-21">
           <mxGeometry x="0.4575" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5EThdJY59Bqr3q9newoY-24" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="5EThdJY59Bqr3q9newoY-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="320" as="sourcePoint" />
+            <mxPoint x="1000" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="820" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5EThdJY59Bqr3q9newoY-25" value="reconsume-deadline-logic consum" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5EThdJY59Bqr3q9newoY-24">
+          <mxGeometry x="-0.065" y="-3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
